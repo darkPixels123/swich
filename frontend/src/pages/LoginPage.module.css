@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "poppins";
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: "poppins";
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.imageCarousel {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  animation: fadeImages 20s infinite; /* 20s for entire cycle, modify as needed */
+}
+
+.carouselOverlay {
+  background-color: rgba(24, 23, 22, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  background-color: rgb(24, 23, 22, 0.5);
+  width: 500px;
+  height: 500px;
+  margin-top: 10%;
+  border-radius: 8px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customInputContainer {
+  background-color: red;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.customInput {
+  width: 100%;
+  padding-left: 3%;
+  background-color: rgb(24, 23, 22);
+  color: #ea1414;
+  border: none;
+  outline: #ea1414;
+}
+
+/* login btn */
+.loginBtn,
+.loginBtn::after {
+  width: 180px;
+  height: 56px;
+  font-size: 16px;
+  font-family: "poppins";
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 58px;
+  box-shadow: 6px 0px 0px  rgb(24, 23, 22);
+  outline: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.loginBtn::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "AVAILABLE NOW";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #121111 3%,
+    #e81111 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #b60404, 3px 3px 0px #0d0d0d;
+  clip-path: var(--slice-0);
+}
+
+.loginBtn:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+/* login btn */
+
+@keyframes fadeImages {
+  0%,
+  100% {
+    background-image: url("../assets/images/footBall1.jpg");
+    opacity: 1;
+  }
+  20% {
+    background-image: url("../assets/images/valorant1.jpg");
+    opacity: 1;
+  }
+  40% {
+    background-image: url("../assets/images/apexLegends1.jpg");
+    opacity: 1;
+  }
+  60% {
+    background-image: url("../assets/images/codImg1.jpg");
+    opacity: 1;
+  }
+  80% {
+    background-image: url("../assets/images/the-crew-motorfest.jpg");
+    opacity: 1;
+  }
+  100% {
+    background-image: url("../assets/images/footBall1.jpg");
+    opacity: 1;
+  }
+}
