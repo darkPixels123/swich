@@ -37,7 +37,10 @@ export default function LoginPage() {
                 />
               </div>
               {/* input fields */}
-              {/* <button className={styles.loginBtn}>SIGN IN</button> */}
+              <div style={{display:"flex",flexDirection:"row",gap:30,marginTop:"50px"}}>
+                <button className={styles.loginBtn}>LOG IN</button>
+                <button className={styles.signupBtn}>SIGN UP</button>
+              </div>
             </div>
           </div>
         </div>
