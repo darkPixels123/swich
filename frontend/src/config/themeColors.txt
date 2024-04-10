@@ -1,0 +1,3 @@
+black->#181716
+red->#ea1414
+white->#ffffff
