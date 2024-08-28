@@ -35,8 +35,8 @@
 .formContainer {
   background-color: rgb(24, 23, 22, 0.5);
   width: 500px;
-  height: 500px;
-  margin-top: 10%;
+  height: 400px;
+  margin-top: 13%;
   border-radius: 8px;
   position: absolute;
   display: flex;

@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "../LoginPage.module.css";
+import LoadingPage2 from "../loadingPage/LoadingPage2";
 
 export default function LoginPage() {
+  
   return (
+
     <div className={styles.mainContainer}>
       <div className={styles.imageCarousel}>
         <div className={styles.carouselOverlay}>
@@ -37,7 +40,14 @@ export default function LoginPage() {
                 />
               </div>
               {/* input fields */}
-              <div style={{display:"flex",flexDirection:"row",gap:30,marginTop:"50px"}}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 30,
+                  marginTop: "50px",
+                }}
+              >
                 <button className={styles.loginBtn}>LOG IN</button>
                 <button className={styles.signupBtn}>SIGN UP</button>
               </div>
@@ -46,5 +56,25 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+
+    // <div>
+    //   <LoadingPage2 />
+    // </div>
+    // <div>
+    //   <div id="myNav" class="overlay">
+    //     <a href="javascript:void(0)" class="closebtn" onClick={closeNav()}>
+    //       &times;
+    //     </a>
+
+    //     <div class="overlay-content">
+    //       <a href="#">About</a>
+    //       <a href="#">Services</a>
+    //       <a href="#">Clients</a>
+    //       <a href="#">Contact</a>
+    //     </div>
+    //   </div>
+
+    //   <span onClick={openNav()}>open</span>
+    // </div>
   );
 }
